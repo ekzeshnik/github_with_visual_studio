@@ -201,12 +201,64 @@ int print_sum_of_all_odd_or_even_or_prime_nums_in_range() {
             std::cout << "There is no " << userChoice << " option.\n";
             exit(0);
     }
+    return 0;
+}
 
+int printPyramidFromNumbers() {
+    int pyramidHeight;
+
+    std::cout << "Enter pyramid height: ";
+    std::cin >> pyramidHeight;
+
+    if (pyramidHeight > 0)
+        for (int changingPyramidHeight = pyramidHeight; changingPyramidHeight > 0; changingPyramidHeight--) {
+            for (int pyramidNumbers = 1; pyramidNumbers <= changingPyramidHeight; pyramidNumbers++) {
+                std::cout << pyramidNumbers << " ";
+            }
+            std::cout << std::endl;
+        }
+
+    else if (pyramidHeight < 0) {
+        for (int changingPyramidHeight = -pyramidHeight; changingPyramidHeight > 0; changingPyramidHeight--) {
+            for (int pyramidNumbers = 1; pyramidNumbers <= changingPyramidHeight; pyramidNumbers++) {
+                std::cout << pyramidNumbers << " ";
+            }
+            std::cout << std::endl;
+        }
+
+        std::cout << '0' << std::endl;
+
+        for (int changingPyramidHeight = -1; changingPyramidHeight >= pyramidHeight; changingPyramidHeight--) {
+            for (int pyramidNumbers = -1; pyramidNumbers >= changingPyramidHeight; pyramidNumbers--) {
+                std::cout << pyramidNumbers << " ";
+            }
+            std::cout << std::endl;
+        }
+    }
+
+    return 0;
+}
+
+int checl_if_number_is_even_with_ternary_operator() {
+    long int inputNumberToCheck;
+    bool isNumberEvenTernaryOperator;
+
+    std::cout << "Enter a number: ";
+    std::cin >> inputNumberToCheck;
+
+    isNumberEvenTernaryOperator = (inputNumberToCheck % 2 == 0) ? true : false;
+
+    if (isNumberEvenTernaryOperator) {
+        std::cout << inputNumberToCheck << " is even." << std::endl;
+    }
+    else if (!isNumberEvenTernaryOperator) {
+        std::cout << inputNumberToCheck << " is odd." << std::endl;
+    }
     return 0;
 }
 
 int main()
 {
-    print_sum_of_all_odd_or_even_or_prime_nums_in_range();
+    checl_if_number_is_even_with_ternary_operator();
 }
 
