@@ -180,7 +180,7 @@ int print_sum_of_all_odd_or_even_or_prime_nums_in_range() {
                 bool isNumberPrime = true;
                 
                 if (checkIfNumberIsPrime == 1) {
-                    checkIfNumberIsPrime++;
+                    continue;
                 }
 
                 for (int allDividers = 2; allDividers <= sqrtDividers; allDividers++) {
@@ -190,6 +190,7 @@ int print_sum_of_all_odd_or_even_or_prime_nums_in_range() {
                     }
                 }
                 if (isNumberPrime) {
+                    std::cout << checkIfNumberIsPrime << std::endl;
                     sum += checkIfNumberIsPrime;
                 } 
             }
@@ -198,6 +199,7 @@ int print_sum_of_all_odd_or_even_or_prime_nums_in_range() {
 
         default:
             std::cout << "There is no " << userChoice << " option.\n";
+            exit(0);
     }
 
     return 0;
