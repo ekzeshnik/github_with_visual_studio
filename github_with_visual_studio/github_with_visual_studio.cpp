@@ -258,7 +258,7 @@ int checl_if_number_is_even_with_ternary_operator() {
     return 0;
 }
 
-int printsum_of_pyramid() {
+int print_sum_of_pyramid() {
     int sumPyramidHeight, sumOfPyramidElements;
 
     std::cout << "Enter pyramid height: ";
