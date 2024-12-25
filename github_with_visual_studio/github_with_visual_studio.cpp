@@ -251,14 +251,37 @@ int checl_if_number_is_even_with_ternary_operator() {
     if (isNumberEvenTernaryOperator) {
         std::cout << inputNumberToCheck << " is even." << std::endl;
     }
-    else if (!isNumberEvenTernaryOperator) {
+    else if (isNumberEvenTernaryOperator) {
         std::cout << inputNumberToCheck << " is odd." << std::endl;
+    }
+
+    return 0;
+}
+
+int printsum_of_pyramid() {
+    int sumPyramidHeight, sumOfPyramidElements;
+
+    std::cout << "Enter pyramid height: ";
+    std::cin >> sumPyramidHeight;
+
+    if (sumPyramidHeight > 0)
+        for (int sumChangingPyramidHeight = 1; sumChangingPyramidHeight <= sumPyramidHeight; sumChangingPyramidHeight++) {
+            sumOfPyramidElements = 0;
+            for (int sumPyramidNumbers = 1; sumPyramidNumbers <= sumChangingPyramidHeight; sumPyramidNumbers++) {
+                sumOfPyramidElements += sumPyramidNumbers;
+                std::cout << sumPyramidNumbers << " ";
+            }
+            std::cout << "= " << sumOfPyramidElements;
+            std::cout << std::endl;
+        }
+    else {
+        std::cout << sumPyramidHeight << " creates error in this code. Maybe this is negative integer, zero or non digit.";
     }
     return 0;
 }
 
 int main()
 {
-    checl_if_number_is_even_with_ternary_operator();
+    printsum_of_pyramid();
 }
 
