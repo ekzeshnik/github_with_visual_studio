@@ -282,6 +282,6 @@ int print_sum_of_pyramid() {
 
 int main()
 {
-    printsum_of_pyramid();
+    print_sum_of_pyramid();
 }
 
