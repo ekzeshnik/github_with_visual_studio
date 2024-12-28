@@ -280,8 +280,39 @@ int print_sum_of_pyramid() {
     return 0;
 }
 
+int forLoopWithList() {
+    for (int values : {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}) {
+        std::cout << values << " ";
+    }
+    std::cout << std::endl;
+
+    for (char values : {'a', 'b', 'c', 'd'}) {
+        std::cout << values << " ";
+    }
+
+    return 0;
+}
+
+int isPalindrome(int number) {
+    int originalNumber = number, reversedNuber = 0;
+
+    while (number > 0) {
+        int lastElementOfNumber = number % 10;
+        reversedNuber = reversedNuber * 10 + lastElementOfNumber;
+        number /= 10;
+    }
+
+    std::cout << "Original number: " << originalNumber << std::endl;
+    std::cout << "Reversed number: " << reversedNuber << std::endl;
+
+    return 0;
+}
+
 int main()
 {
-    print_sum_of_pyramid();
+    int number;
+    std::cout << "Enter a number: ";
+    std::cin >> number;
+    isPalindrome(number);
 }
 
