@@ -308,11 +308,25 @@ int isPalindrome(int number) {
     return 0;
 }
 
+int printSquare() {
+    int squareSideLength;
+
+    std::cout << "Enter length of square's side: ";
+    std::cin >> squareSideLength;
+
+    for (int i = squareSideLength; i > 0; i--) {
+        for (int a = squareSideLength; a > 0; a--) {
+            std::cout << "* ";
+        }
+        std::cout << std::endl;
+    }
+    return 0;
+
+}
+      
+
 int main()
 {
-    int number;
-    std::cout << "Enter a number: ";
-    std::cin >> number;
-    isPalindrome(number);
+    return 0;
 }
 
